@@ -140,7 +140,7 @@ command to create namespace by yml file
 <pre><code>kubectl apply -f namespace/namespace.yml</code></pre>
 
 show all namespace
-<pre><code>kubectl get ns</code.</pre>
+<pre><code>kubectl get ns</code></pre>
 
 set any namespace to default
 <pre><code>
