@@ -5,12 +5,12 @@ k8s architecture
 
 ![Alt text](https://github.com/herrry107/Kubernetes/blob/main/K8-arch.png)
 
-***KUBERNETES CLUSTER CREATION TYPE
+KUBERNETES CLUSTER CREATION TYPE
 - kubeadm
 - minikube (local/ec2)
 - kind cluster (docker)
 - EKS/AKS/GKS
-***
+
 **KUBERNETES INSTALLATION ON UBUNTU LINUX**
 
 bash command to setup kubernetes on ubuntu linux or aws
