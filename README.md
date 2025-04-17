@@ -6,7 +6,7 @@ k8s architecture
 ![Alt text](https://github.com/herrry107/Kubernetes/blob/main/K8-arch.png)
 
 
-KUBERNETES INSTALLATION ON UBUNTU LINUX
+**KUBERNETES INSTALLATION ON UBUNTU LINUX**
 
 bash command to setup kubernetes on ubuntu linux or aws
 
@@ -26,7 +26,7 @@ apt-get install kubectl -y
 apt-get install -y kubeadm kubernetes-cni kubelet
 </code></pre>
 
-install helm 
+command to install helm 
 <pre><code>
 curl -fsSL -o gett_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod +x gett_helm.sh
@@ -34,7 +34,7 @@ chmod +x gett_helm.sh
 helm version
 </code></pre>
 
-Kubernetes Kind: It’s a tool for running local Kubernetes clusters using Docker containers as "nodes".
+**Kubernetes Kind: It’s a tool for running local Kubernetes clusters using Docker containers as "nodes"**
 
 command to setup kubernetes kind 
 <pre><code>
