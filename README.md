@@ -195,3 +195,6 @@ spec:
 
 create pod by apply command
 <pre><code>kubectl apply -f pods/pod1.yml</code></pre>
+
+Go inside active pod container
+<pre><code>kubectl exec -it pod/pod1 -n nginx -- bash</code></pre>
