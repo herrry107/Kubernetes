@@ -99,3 +99,15 @@ get nodes
 
 change kubectl default cluster
 <pre><code>kubectl config use-context kind-cluster1</code></pre>
+
+**Kubernetes Namespace: A Kubernetes namespace is a way to divide cluster resources between multiple users or projects. Think of it like a virtual cluster within a real cluster.**
+
+create or delete namespace
+<pre><code>
+#create namespace with name "nginx"
+kubectl create ns nginx # command 1
+kubectl create namespace nginx # command 2 we can use command 1 or 2, both are same
+
+#delete namespace with name "nginx"
+kubectl delete ns nginx # command 1
+kubectl delete namespace nginx # command 2
