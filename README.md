@@ -107,7 +107,7 @@ get nodes
 change kubectl default cluster
 <pre><code>kubectl config use-context kind-cluster1</code></pre>
 
-**Kubernetes Namespace: A Kubernetes namespace is a way to divide cluster resources between multiple users or projects. Think of it like a virtual cluster within a real cluster.**
+- **Kubernetes Namespace: A Kubernetes namespace is a way to divide cluster resources between multiple users or projects. Think of it like a virtual cluster within a real cluster.**
 
 create or delete namespace
 <pre><code>
@@ -143,5 +143,16 @@ set any namespace to default
 <pre><code>
 #kubectl config set-context --current --namespace=<your-namespace>
 kubectl config set-context --current --namespace=nginx
+</code></pre>
+
+- **In Kubernetes, a pod is the smallest, deployable unit of computing and essentially encapsulates one or more application containers. Pods provide shared resources like networking, IP addresses, and storage (volumes) for these containers. They are ephemeral, meaning if a pod fails, Kubernetes can automatically recreate it.**
+
+get running pods list
+
+<pre><code>#get pods in default nameserver
+kubectl get pods</code></pre>
+
+<pre><code>#get pods in specific nameserver
+kubectl get pods -n nginx # nginx is nameserver name
 </code></pre>
 
