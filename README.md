@@ -139,13 +139,16 @@ metadata:
 command to create namespace by yml file 
 <pre><code>kubectl apply -f namespace/namespace.yml</code></pre>
 
+show all namespace
+<pre><code>kubectl get ns</code.</pre>
+
 set any namespace to default
 <pre><code>
 #kubectl config set-context --current --namespace=<your-namespace>
 kubectl config set-context --current --namespace=nginx
 </code></pre>
 
-- **In Kubernetes, a pod is the smallest, deployable unit of computing and essentially encapsulates one or more application containers. Pods provide shared resources like networking, IP addresses, and storage (volumes) for these containers. They are ephemeral, meaning if a pod fails, Kubernetes can automatically recreate it.**
+- **Kubernetes PODs: In Kubernetes, a pod is the smallest, deployable unit of computing and essentially encapsulates one or more application containers. Pods provide shared resources like networking, IP addresses, and storage (volumes) for these containers. They are ephemeral, meaning if a pod fails, Kubernetes can automatically recreate it.**
 
 get running pods list
 
@@ -156,3 +159,14 @@ kubectl get pods</code></pre>
 kubectl get pods -n nginx # nginx is nameserver name
 </code></pre>
 
+create pod in default namespace
+<pre><code>kubectl run pod1 --image=nginx</code></pre>
+
+create pod in specific namespace
+<pre><code>kubectl run pod2 --image=nginx -n nginx</code></pre>
+
+delete pod 
+<pre><code>kubectl delete pod pod1</code></pre>
+
+delete pod in specific namespace
+<pre><code>kubectl delete pod pod2 -n nginx</code></pre>
