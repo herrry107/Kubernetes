@@ -10,7 +10,7 @@ k8s architecture
 - minikube (local/ec2)
 - kind cluster (docker)
 - EKS/AKS/GKS
-
+***
 **KUBERNETES INSTALLATION ON UBUNTU LINUX**
 
 bash command to setup kubernetes on ubuntu linux or aws
