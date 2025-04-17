@@ -120,7 +120,7 @@ kubectl delete ns nginx # command 1
 kubectl delete namespace nginx # command 2
 </code></pre>
 
-create namespace dir 
+create NAMESPACE folder 
 <pre><code>
 mkdir namespace
 cd namespace
@@ -171,6 +171,7 @@ delete pod
 delete pod in specific namespace
 <pre><code>kubectl delete pod pod2 -n nginx</code></pre>
 
+create POD folder
 <pre><code>
 mkdir pods
 touch pods/pod1.yml
@@ -190,7 +191,7 @@ spec:
       image: nginx:latest
       ports:
         - containerPort: 80 
-<pre><code></code></pre>
+</code></pre>
 
 create pod by apply command
 <pre><code>kubectl apply -f pods/pod1.yml</code></pre>
