@@ -9,7 +9,7 @@ k8s architecture
 - kubeadm
 - minikube (local/ec2)
 - kind cluster (docker)
-- EKS/AKS***
+- EKS/AKS/GKS
 
 **KUBERNETES INSTALLATION ON UBUNTU LINUX**
 
