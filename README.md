@@ -1,7 +1,7 @@
 # Kubernetes
-Basic-to-Advance
-
 **Kubernetes is an open-source container orchestration platform. It automates the deployment, management, and scaling of containerized applications. Think of it as a system that helps you manage and organize your applications when they are running in containers, especially when you have multiple containers and need to distribute them across different physical or virtual machines.**
+
+Basic-to-Advance
 
 k8s architecture
 
