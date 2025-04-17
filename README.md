@@ -29,8 +29,8 @@ apt-get install -y kubeadm kubernetes-cni kubelet
 install helm 
 <pre><code>
 curl -fsSL -o gett_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
- chmod +x gett_helm.sh
- ./gett_helm.sh
- helm version
+chmod +x gett_helm.sh
+./gett_helm.sh
+helm version
 </code></pre>
  
