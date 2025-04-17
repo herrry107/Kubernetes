@@ -111,3 +111,30 @@ kubectl create namespace nginx # command 2 we can use command 1 or 2, both are s
 #delete namespace with name "nginx"
 kubectl delete ns nginx # command 1
 kubectl delete namespace nginx # command 2
+</code></pre>
+
+create namespace dir 
+<pre><code>
+mkdir namespace
+cd namespace
+touch namespace.yml
+</code></pre>
+
+create namespace yml file
+<pre><code>
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx
+</code></pre>
+
+
+command to create namespace by yml file 
+<pre><code>kubectl apply -f namespace/namespace.yml</code></pre>
+
+set any namespace to default
+<pre><code>
+#kubectl config set-context --current --namespace=<your-namespace>
+kubectl config set-context --current --namespace=nginx
+</code></pre>
+
