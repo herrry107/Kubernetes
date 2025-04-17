@@ -170,3 +170,27 @@ delete pod
 
 delete pod in specific namespace
 <pre><code>kubectl delete pod pod2 -n nginx</code></pre>
+
+<pre><code>
+mkdir pods
+touch pods/pod1.yml
+</code></pre>
+
+create pod by yml file
+
+<pre><code>
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: pod1
+  namespace: nginx
+spec:
+  containers:
+    - name: con1
+      image: nginx:latest
+      ports:
+        - containerPort: 80 
+<pre><code></code></pre>
+
+create pod by apply command
+<pre><code>kubectl apply -f pods/pod1.yml</code></pre>
