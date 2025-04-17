@@ -1,6 +1,11 @@
 # Kubernetes
 Basic-to-Advance
 
+k8s architecture
+
+![Alt text](https://github.com/herrry107/Kubernetes/blob/main/K8-arch.png)
+
+
 KUBERNETES INSTALLATION ON UBUNTU LINUX
 
 bash command to setup kubernetes on ubuntu linux or aws
