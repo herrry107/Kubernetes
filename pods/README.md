@@ -63,7 +63,7 @@ kubectl exec -it pod/pod1 -n nginx -- bash
 </code></pre>
 
 Described info about running pod
-<pre><code>kubectl describe pod/pod1 -n nginx
+<pre><code>kubectl describe pod/pod1 -n nginx</code></pre>
 
 ***ReplicaSet, StatefulSet and Deployment***
 
