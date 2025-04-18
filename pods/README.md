@@ -99,3 +99,31 @@ Described info about running pod
     - *Pods are started/stopped in a specific order.*
     - *Not suitable for stateless apps.*
     - *Does not support rolling updates as smoothly as Deployment (may require manual steps).*
+
+deployment1.yml file for deployment demo
+ 
+<pre><code>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+</code></pre>
+
+<pre><code>kubectl apply -f deployment1.yml </code></pre>
+
