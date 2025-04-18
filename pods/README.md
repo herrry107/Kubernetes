@@ -127,3 +127,5 @@ spec:
 
 <pre><code>kubectl apply -f deployment1.yml </code></pre>
 
+<pre><code>kubectl get deployments -n nginx  #get info about deployment</code></pre>
+<pre><code>kubectl scale deployment/nginx-deployment -n nginx --replicas=3 #scale up or down of replicas in existing deployment</code></pre>
