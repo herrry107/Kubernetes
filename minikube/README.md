@@ -16,4 +16,14 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-a
 start minikube
 <pre><code>
 minikube start --driver=docker --vm=true
-</code></pre> 
+</code></pre>
+
+stop minikube
+<pre><code>
+minikube stop
+</code></pre>
+
+delete minikube
+<pre><code>
+minikube delete
+</code></pre>       
