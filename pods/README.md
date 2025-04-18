@@ -100,6 +100,14 @@ Described info about running pod
     - *Not suitable for stateless apps.*
     - *Does not support rolling updates as smoothly as Deployment (may require manual steps).*
 
+**Labels**
+- *What: Key-value pairs attached to objects like Pods, Services, ReplicaSets, etc.*
+- *Why: To organize, identify, and select subsets of objects.*
+
+**Selectors**
+- *What: Used to filter/select resources based on their labels.*
+- *Why: So things like Services, ReplicaSets, Deployments can find the right pods to work with.*
+
 deployment1.yml file for deployment demo
  
 <pre><code>
