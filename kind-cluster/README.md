@@ -3,6 +3,8 @@
 **Kubernetes Kind: It’s a tool for running local Kubernetes clusters using Docker containers as "nodes"**
 
 ***kubernetes config file to create control-plane and nodes into docker***
+<pre><code>vim kind-config.yml</code></pre>
+
 <pre><code>
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4

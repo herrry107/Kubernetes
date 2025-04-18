@@ -12,6 +12,9 @@ kubectl delete namespace nginx # command 2
 </code></pre>
 
 create namespace yml file
+
+<pre><code>vim namespace.yml</code></pre>
+
 <pre><code>
 apiVersion: v1
 kind: Namespace
