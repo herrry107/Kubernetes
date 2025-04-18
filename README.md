@@ -198,3 +198,11 @@ create pod by apply command
 
 Go inside active pod container
 <pre><code>kubectl exec -it pod/pod1 -n nginx -- bash</code></pre>
+
+**KUBECTL: kubectl is the primary command-line tool for interacting with Kubernetes clusters. It's used to deploy applications, manage resources, view logs, and perform other operations on a Kubernetes cluster. Essentially, it's the way you tell Kubernetes what to do.**
+
+<pre><code>
+kubectl get pods            # get pods list
+kubectl get nodes           # get nodes 
+kubectl get ns              # get namespace
+kubectl get pods -n nginx   # get pod in specific namespace
