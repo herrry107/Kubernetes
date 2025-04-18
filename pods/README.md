@@ -67,7 +67,7 @@ Described info about running pod
 
 ***ReplicaSet, StatefulSet and Deployment***
 
-**ReplicaSet**
+**REPLICASET**
 
 - ***Purpose***: *Ensures a specified number of pod replicas are running at any given time.*
 
@@ -76,3 +76,26 @@ Described info about running pod
 - ***Behavior***:
     - *Only ensures pod count.*
     - *Doesn't provide rolling updates or versioning.*
+
+**DEPLOYMENT**
+
+- ***Purpose***: *Manages stateless applications and handles rolling updates, rollbacks, and scaling.*
+
+- ***Use Case***: *The most common resource used to manage workloads.*
+
+- ***Behavior***:
+    - *Uses ReplicaSet under the hood.*
+    - *Supports zero-downtime rolling updates.*
+    - *Can rollback to a previous version.*
+    - *Ideal for stateless applications.*
+
+**STATEFULSET**
+- ***Purpose***: *Manages stateful applications (those that require persistent storage and stable network identity).*
+
+- ***Use Case***: *Databases, queues, and apps needing stable identity, ordered startup/shutdown, or persistent volume claims.*
+
+- ***Behavior***:
+    - *Gives each pod a stable hostname and persistent volume.*
+    - *Pods are started/stopped in a specific order.*
+    - *Not suitable for stateless apps.*
+    - *Does not support rolling updates as smoothly as Deployment (may require manual steps).*
