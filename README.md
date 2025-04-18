@@ -57,48 +57,6 @@ apt-get install docker.io –y
 
 </code></pre>
 
-
-- **Kubernetes Namespace: A Kubernetes namespace is a way to divide cluster resources between multiple users or projects. Think of it like a virtual cluster within a real cluster.**
-
-create or delete namespace
-<pre><code>
-#create namespace with name "nginx"
-kubectl create ns nginx # command 1
-kubectl create namespace nginx # command 2 we can use command 1 or 2, both are same
-
-#delete namespace with name "nginx"
-kubectl delete ns nginx # command 1
-kubectl delete namespace nginx # command 2
-</code></pre>
-
-create NAMESPACE folder 
-<pre><code>
-mkdir namespace
-cd namespace
-touch namespace.yml
-</code></pre>
-
-create namespace yml file
-<pre><code>
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: nginx
-</code></pre>
-
-
-command to create namespace by yml file 
-<pre><code>kubectl apply -f namespace/namespace.yml</code></pre>
-
-show all namespace
-<pre><code>kubectl get ns</code></pre>
-
-set any namespace to default
-<pre><code>
-#kubectl config set-context --current --namespace=<your-namespace>
-kubectl config set-context --current --namespace=nginx
-</code></pre>
-
 - **Kubernetes PODs: In Kubernetes, a pod is the smallest, deployable unit of computing and essentially encapsulates one or more application containers. Pods provide shared resources like networking, IP addresses, and storage (volumes) for these containers. They are ephemeral, meaning if a pod fails, Kubernetes can automatically recreate it.**
 
 get running pods list
