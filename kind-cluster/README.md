@@ -2,6 +2,21 @@
 
 **Kubernetes Kind: It’s a tool for running local Kubernetes clusters using Docker containers as "nodes"**
 
+command to setup kubernetes kind
+<pre><code>
+
+# For AMD64 / x86_64
+[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
+# For ARM64
+[ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-arm64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
+apt-get install docker.io –y
+
+</code></pre>
+
 ***kubernetes config file to create control-plane and nodes into docker***
 <pre><code>vim kind-config.yml</code></pre>
 
