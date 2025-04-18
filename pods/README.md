@@ -1,4 +1,4 @@
-**Kubernetes PODS
+**Kubernetes PODS**
 
 **Kubernetes PODs: In Kubernetes, a pod is the smallest, deployable unit of computing and essentially encapsulates one or more application containers. Pods provide shared resources like networking, IP addresses, and storage (volumes) for these containers. They are ephemeral, meaning if a pod fails, Kubernetes can automatically recreate it.**
 
