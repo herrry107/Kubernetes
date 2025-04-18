@@ -62,4 +62,17 @@ Go inside active pod container
 kubectl exec -it pod/pod1 -n nginx -- bash
 </code></pre>
 
+Described info about running pod
+<pre><code>kubectl describe pod/pod1 -n nginx
 
+***ReplicaSet, StatefulSet and Deployment***
+
+**ReplicaSet**
+
+- ***Purpose***: *Ensures a specified number of pod replicas are running at any given time.*
+
+- ***Use Case***: *Low-level controller. Usually not used directly by users — instead, it's managed by a Deployment.*
+
+- ***Behavior***:
+    - *Only ensures pod count.*
+    - *Doesn't provide rolling updates or versioning.*
