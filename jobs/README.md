@@ -41,12 +41,3 @@ spec:
 **CRONJOB**
 
 **A CronJob is a scheduled job in Unix-like operating systems, used to run scripts or commands automatically at specified times and intervals. It is defined in the crontab (cron table), and the format looks like this:**
-
-* * * * * command_to_run
-│ │ │ │ │
-│ │ │ │ └───── Day of the week (0 - 7) (Sunday=0 or 7)
-│ │ │ └──────── Month (1 - 12)
-│ │ └──────────── Day of the month (1 - 31)
-│ └──────────────── Hour (0 - 23)
-└──────────────────── Minute (0 - 59)
-
