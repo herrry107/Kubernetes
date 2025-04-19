@@ -65,7 +65,7 @@ kubectl exec -it pod/pod1 -n nginx -- bash
 Described info about running pod
 <pre><code>kubectl describe pod/pod1 -n nginx</code></pre>
 
-** DaemonSet / ReplicaSet / StatefulSet / Deployment**
+**DaemonSet / ReplicaSet / StatefulSet / Deployment**
 
 
 **DAEMONSET**
@@ -189,4 +189,26 @@ kubectl scale replicaset/nginx-replicasets -n nginx --replicas=3
 </code></pre>
 <pre><code>kubectl delete -f pods/replicaSet1.yml</code></pre>
 
+daemonset1.yml file for daemonset demo
 
+<pre><code>
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: nginx-daemonsets
+  namespace: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx-dmn-pod
+  template:
+    metadata:
+      labels:
+        app: nginx-dmn-pod
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+</code></pre>
