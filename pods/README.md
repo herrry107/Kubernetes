@@ -65,7 +65,17 @@ kubectl exec -it pod/pod1 -n nginx -- bash
 Described info about running pod
 <pre><code>kubectl describe pod/pod1 -n nginx</code></pre>
 
-***ReplicaSet, StatefulSet and Deployment***
+** DaemonSet / ReplicaSet / StatefulSet / Deployment**
+
+
+**DAEMONSET**
+- ***Purpose***: *A DaemonSet ensures that a specific Pod is running on every node (or selected nodes) in a Kubernetes cluster.*
+
+- ***Use Case***: *DaemonSets are ideal for running one instance per node of a service that needs to operate locally. Common use cases include:*
+    - *Log Collection Agents: Tools like Fluentd, Filebeat, or Logstash to collect logs from all nodes.*
+    - *Monitoring Agents: Prometheus node exporters, Datadog agents, etc., to collect metrics from each node.*
+    - *Network Plugins: CNI plugins like Calico, Weave, or Flannel.*
+    - *Security or Policy Agents: Agents like Ceph or GlusterFS that need to run on every node to manage storage.* 
 
 **REPLICASET**
 
