@@ -136,7 +136,10 @@ spec:
 <pre><code>kubectl apply -f deployment1.yml </code></pre>
 
 <pre><code>kubectl get deployments -n nginx  #get info about deployment</code></pre>
-<pre><code>kubectl scale deployment/nginx-deployment -n nginx --replicas=3 #scale up or down of replicas in existing deployment</code></pre>
+<pre><code>
+#scale up or down of replicas in existing deployment
+kubectl scale deployment/nginx-deployment -n nginx --replicas=3
+</code></pre>
 
 <pre><code>
 #update image of running deployment containers or change version to 1.27.3, firstly it will create another pods with running state after that it's delete previous version pod
@@ -168,8 +171,12 @@ spec:
         - containerPort: 80
 </code></pre>
 
-<pre><code>kubectl apply -f replicaset1.yml</code></pre>
+<pre><code>kubectl apply -f replicaSet1.yml</code></pre>
 <pre><code>kubectl get replicasets -n nginx</code></pre>
-<pre><code>kubectl delete -f pods/replicasets1.yml</code></pre>
+<pre><code>
+#scale up or down in existing replicasets
+kubectl scale replicaset/nginx-replicasets -n nginx --replicas=3
+</code></pre>
+<pre><code>kubectl delete -f pods/replicaSet1.yml</code></pre>
 
 
