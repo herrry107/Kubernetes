@@ -1,3 +1,0 @@
-hello dosto!
-kubectl logs pod/demo-job-m5szw -n nginx
-<pre><code>kubectl logs pod/demo-job-m5szw -n nginx</code></pre>
