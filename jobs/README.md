@@ -36,3 +36,4 @@ spec:
 
 <pre><code>kubectl get jobs -n nginx</code></pre>
 <pre><code>kubectl get pods -n nginx</code></pre> 
+<pre><code>kubectl logs pod/demo-job-m5szw -n nginx</code></pre>
