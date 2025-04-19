@@ -41,3 +41,5 @@ spec:
 **CRONJOB**
 
 **A CronJob is a scheduled job in Unix-like operating systems, used to run scripts or commands automatically at specified times and intervals. It is defined in the crontab (cron table), and the format looks like this:**
+
+![Alt text](https://github.com/herrry107/Kubernetes/blob/main/jobs/cron.png)
