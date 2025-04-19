@@ -137,3 +137,8 @@ spec:
 
 <pre><code>kubectl get deployments -n nginx  #get info about deployment</code></pre>
 <pre><code>kubectl scale deployment/nginx-deployment -n nginx --replicas=3 #scale up or down of replicas in existing deployment</code></pre>
+
+<pre><code>
+#update image of running deployment containers or change version to 1.27.3, firstly it will create another pods with running state after that it's delete previous version pod
+kubectl set image deployment/nginx-deployment -n nginx=nginx:1.27.3
+</code></pre>
