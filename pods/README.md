@@ -142,3 +142,34 @@ spec:
 #update image of running deployment containers or change version to 1.27.3, firstly it will create another pods with running state after that it's delete previous version pod
 kubectl set image deployment/nginx-deployment -n nginx=nginx:1.27.3
 </code></pre>
+<pre><code>kubectl delete -f pods/deployment1.yml</code></pre>
+
+replicaset1.yml file for replicaSet demo
+<pre><code>
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-replicasets
+  namespace: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-rep-pod
+  template:
+    metadata:
+      labels:
+        app: nginx-rep-pod
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+</code></pre>
+
+<pre><code>kubectl apply -f replicaset1.yml</code></pre>
+<pre><code>kubectl get replicasets -n nginx</code></pre>
+<pre><code>kubectl delete -f pods/replicasets1.yml</code></pre>
+
+
