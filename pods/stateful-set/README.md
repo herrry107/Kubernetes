@@ -44,3 +44,6 @@ spec:
 <pre><code>kubectl apply -f stateful-set.yml</code></pre>
 
 ![Alt-text](https://github.com/herrry107/Kubernetes/blob/main/images/mysql-statefull.png)
+
+insert into container
+<pre><code>kubectl exec -it mysql-statefulset-0 -n mysql -- bash</code></pre>
