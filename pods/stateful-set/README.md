@@ -42,3 +42,5 @@ spec:
 <pre><code>kubectl apply -f mysql-namespace.yml</code></pre>
 <pre><code>kubectl apply -f mysql-service.yml</code></pre>
 <pre><code>kubectl apply -f stateful-set.yml</code></pre>
+
+![Alt-text](https://github.com/herrry107/Kubernetes/blob/main/images/mysql-statefull.png)
