@@ -48,6 +48,6 @@ kubectl get pods            # get pods list
 kubectl get nodes           # get nodes 
 kubectl get ns              # get namespace
 kubectl get pods -n nginx   # get pod in specific namespace
-
+</code></pre>
 ![Alt text](https://github.com/herrry107/Kubernetes/blob/main/images/deployment-service.png)
   
