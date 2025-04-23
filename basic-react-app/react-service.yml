@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: react-app-service
+  namespace: react
+spec:
+  selector:
+    app: react
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: ClusterIP      
