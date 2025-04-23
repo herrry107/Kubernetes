@@ -5,7 +5,7 @@ Basic-to-Advance
 
 k8s architecture
 
-![Alt text](https://github.com/herrry107/Kubernetes/blob/main/K8-arch.png)
+![Alt text](https://github.com/herrry107/Kubernetes/blob/main/images/K8-arch.png)
 
 KUBERNETES CLUSTER CREATION TYPE
 - kubeadm
@@ -48,3 +48,6 @@ kubectl get pods            # get pods list
 kubectl get nodes           # get nodes 
 kubectl get ns              # get namespace
 kubectl get pods -n nginx   # get pod in specific namespace
+
+![Alt text](https://github.com/herrry107/Kubernetes/blob/main/images/deployment-service.png)
+  
