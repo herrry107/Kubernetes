@@ -54,4 +54,4 @@ spec:
             memory: 256Mi   
 </code></pre>
 
-<pre><code>kubectl describe pod <pod-name></code></pre> 
+<pre><code>kubectl describe pod pod-name</code></pre> 
