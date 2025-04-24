@@ -2,6 +2,8 @@
 
 Kubernetes can automatically adjust the number of pods based on CPU/memory usage or custom metrics.
 
+![Alt-text](https://github.com/herrry107/Kubernetes/blob/main/images/scalling.png)
+
 **Horizontal Pod Autoscaler (HPA)**
 
 Scales OUT or IN by changing the number of pod replicas.
