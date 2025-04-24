@@ -1,5 +1,6 @@
 In Kubernetes, a ConfigMap is used to store non-confidential configuration data as key-value pairs. This data can be injected into pods or other Kubernetes objects, allowing you to separate application configuration from the container image and manage it more dynamically.
 
+configMap.yml
 <pre><code>
 
 kind: ConfigMap
@@ -33,6 +34,7 @@ We have to put string into base64 format
 <pre><code>
 #convert root into base64 string 
 echo "root" | base64
+#output: cm9vdAo=
 </code></pre>
 
 secret.yml
@@ -48,3 +50,51 @@ data:
 </code></pre>
 
 <pre><code>kubectl get secret -n mysql</code></pre>
+
+statefulset.yml with configmap and secret
+<pre><code>
+
+kind: StatefulSet
+apiVersion: apps/v1
+metadata:
+  name: mysql-statefulset
+  namespace: mysql
+spec:
+  serviceName: mysql-service
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql  
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:8.0
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_DATABASE
+              valueFrom: 
+                configMapKeyRef:
+                  name: mysql-config-map
+                  key: MYSQL_DATABASE 
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+  volumeClaimTemplates:   
+    - metadata:
+        name: mysql-data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 1Gi      
+</code></pre>
