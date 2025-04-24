@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: pod1
+  namespace: nginx
+spec:
+  containers:
+    - name: con1
+      image: nginx:latest
+      ports:
+        - containerPort: 80 
+  tolerations:
+    - key: "prod"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"    
