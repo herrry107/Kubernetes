@@ -22,3 +22,37 @@ Probes can be implemented using:
 - HTTP GET: Calls a specific HTTP endpoint.
 - TCP Socket: Checks if a TCP port is open.
 - Exec Command: Runs a command inside the container.
+
+probe.yml
+<pre><code>
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: probe-deployment
+  namespace: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: probe
+  template:
+    metadata:
+      labels:
+        app: probe
+    spec:
+      containers:
+      - name: probe
+        image: herrypr107/react1:latest
+        ports:
+        - containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+
+</code></pre>
