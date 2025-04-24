@@ -18,6 +18,8 @@ A taint is applied to a node and tells Kubernetes:
 <pre><code>kubectl taint node cluster-worker2 pod=true:NoSchedule</code></pre>
 <pre><code>kubectl taint node cluster-worker3 pod=true:NoSchedule</code></pre>
 
+![Alt-text](https://github.com/herrry107/Kubernetes/blob/main/images/taint.png)
+
 What is a Toleration?
 A toleration is added to a pod to say:
 - “I can handle this taint, so it’s okay to put me on that node.”
