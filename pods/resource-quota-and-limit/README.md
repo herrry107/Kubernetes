@@ -52,4 +52,6 @@ spec:
           limits:
             cpu: 200m
             memory: 256Mi   
-</code></pre> 
+</code></pre>
+
+<pre><code>kubectl describe pod <pod-name></code></pre> 
