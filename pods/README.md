@@ -212,3 +212,7 @@ spec:
         ports:
         - containerPort: 80
 </code></pre>
+
+[Stateful-Set](https://github.com/herrry107/Kubernetes/tree/main/pods/stateful-set)
+
+[Resource Quota/limit](https://github.com/herrry107/Kubernetes/tree/main/pods/resource-quota-and-limit)
