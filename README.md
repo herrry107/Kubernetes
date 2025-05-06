@@ -51,4 +51,20 @@ kubectl get ns              # get namespace
 kubectl get pods -n nginx   # get pod in specific namespace
 </code></pre>
 ![Alt text](https://github.com/herrry107/Kubernetes/blob/main/images/deployment-service.png)
+
+# Read All Kubernetes Docs by these sequence
+
+- [1. Create Kind-Cluster](https://github.com/herrry107/Kubernetes/tree/main/kind-cluster)
+- [2. Create Minikube](https://github.com/herrry107/Kubernetes/tree/main/minikube)
+- [3. Namespace](https://github.com/herrry107/Kubernetes/tree/main/namespace)
+- [4. Pods](https://github.com/herrry107/Kubernetes/tree/main/pods)
+- [5. Jobs](https://github.com/herrry107/Kubernetes/tree/main/jobs)
+- [6. Volumes](https://github.com/herrry107/Kubernetes/tree/main/volume)
+- [7. Services](https://github.com/herrry107/Kubernetes/tree/main/services)
+- [8. Ingress](https://github.com/herrry107/Kubernetes/tree/main/ingress)
+- [9. ConfigMaps/Secrets](https://github.com/herrry107/Kubernetes/tree/main/config-maps-secrets)
+- [10. Probes](https://github.com/herrry107/Kubernetes/tree/main/probes)
+- [11. Taints/Tolerations](https://github.com/herrry107/Kubernetes/tree/main/Taints-Tolerations)
+- [12. Auto Scalling](https://github.com/herrry107/Kubernetes/tree/main/AutoScalling)
+
   
