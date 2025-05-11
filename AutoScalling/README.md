@@ -39,4 +39,31 @@ We have to create metrics
 minikube addons enable metrics-server
 </code></pre>
 
+If you are using a Kind cluster install Metrics Server
+<pre><code>
+# run in kind-cluster only
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml  
+</code></pre>
 
+Edit the Metrics Server Deployment
+<pre><code>
+kubectl -n kube-system edit deployment metrics-server
+</code></pre>
+
+Add the security bypass to deployment under container.args
+<pre><code>
+- --kubelet-insecure-tls
+- --kubelet-preferred-address-types=InternalIP,Hostname,ExternalIP
+</code></pre>
+
+  
+Restart the deployment
+<pre><code>
+kubectl -n kube-system rollout restart deployment metrics-server
+</code></pre>
+
+Verify if the metrics server is running
+<pre><code>
+kubectl get pods -n kube-system
+kubectl top nodes
+</code></pre>
