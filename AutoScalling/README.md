@@ -73,4 +73,29 @@ kubectl top nodes
 
 ![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step3.png)
 
+hpa.yml
+<pre><code>
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: apache-hpa
+  namespace: apache
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: apache-deployment
+    apiVersion: apps/v1
+     
+  minReplicas: 1
+  maxReplicas: 5
 
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: 
+          type: Utilization
+          averageUtilization: 5    
+</code></pre>
+<pre><code>kubectl apply -f hpa.yml</code></pre>
+<pre><code>kubectl get hpa -n apache</code></pre>
