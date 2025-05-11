@@ -1,10 +1,10 @@
-**Auto Scaling**
+# Auto Scaling
 
 Kubernetes can automatically adjust the number of pods based on CPU/memory usage or custom metrics.
 
 ![Alt-text](https://github.com/herrry107/Kubernetes/blob/main/images/scalling.png)
 
-**Horizontal Pod Autoscaler (HPA)**
+# Horizontal Pod Autoscaler (HPA)
 
 Scales OUT or IN by changing the number of pod replicas.
 
@@ -16,7 +16,7 @@ Use when:
 - Your app can handle load by running more instances.
 - You're handling variable traffic patterns.
 
-**Vertical Pod Autoscaler (VPA)**
+# Vertical Pod Autoscaler (VPA)
 
 Scales UP or DOWN by adjusting the resources (CPU/memory) of individual pods.
 
