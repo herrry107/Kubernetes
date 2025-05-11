@@ -33,3 +33,10 @@ Use when:
 
 ![Metrics-Not-Available](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-not-available.png)
 
+We have to create metrics 
+<pre><code>
+#run in minikube only
+minikube addons enable metrics-server
+</code></pre>
+
+
