@@ -72,3 +72,5 @@ kubectl top nodes
 </code></pre>
 
 ![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step3.png)
+
+
