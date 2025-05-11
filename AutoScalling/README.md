@@ -99,3 +99,5 @@ spec:
 </code></pre>
 <pre><code>kubectl apply -f hpa.yml</code></pre>
 <pre><code>kubectl get hpa -n apache</code></pre>
+
+![Metrics](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step4.png)
