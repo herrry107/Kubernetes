@@ -50,12 +50,15 @@ Edit the Metrics Server Deployment
 kubectl -n kube-system edit deployment metrics-server
 </code></pre>
 
+![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step1.png)
+
 Add the security bypass to deployment under container.args
 <pre><code>
 - --kubelet-insecure-tls
 - --kubelet-preferred-address-types=InternalIP,Hostname,ExternalIP
 </code></pre>
 
+![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step2.png)
   
 Restart the deployment
 <pre><code>
@@ -67,3 +70,5 @@ Verify if the metrics server is running
 kubectl get pods -n kube-system
 kubectl top nodes
 </code></pre>
+
+![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step3.png)
