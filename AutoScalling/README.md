@@ -132,3 +132,5 @@ spec:
     updateMode: "Auto"
 </code></pre>
 
+<pre><code>kubectl get vpa</code></pre>
+
