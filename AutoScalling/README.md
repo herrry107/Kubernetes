@@ -73,6 +73,9 @@ kubectl top nodes
 
 ![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step3.png)
 
+
+# HPA
+
 hpa.yml
 <pre><code>
 apiVersion: autoscaling/v2
@@ -101,3 +104,16 @@ spec:
 <pre><code>kubectl get hpa -n apache</code></pre>
 
 ![Metrics](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step4.png)
+
+# VPA
+
+firstly we have to configure some files for VPA 
+
+clone kubernetes/autoscaller official github
+<pre><code>
+git clone https://github.com/kubernetes/autoscaler.git
+cd /autoscaler/vertical-pod-autoscaler  # go inside directory
+./hack/vpa-up.sh                        #run script
+</code></pre>
+
+
