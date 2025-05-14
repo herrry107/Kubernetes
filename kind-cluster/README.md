@@ -11,9 +11,7 @@ command to setup kubernetes kind
 [ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-arm64
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
-apt-get install docker.io –y
 
 </code></pre>
 
