@@ -45,3 +45,74 @@ kubectl auth can-i get deployment -n nginx
 </code></pre>
 
 but we don't want to all user access all namespace aur specific command
+
+first we will create role.yml file
+
+role.yml
+<pre><code>
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: apache-manager
+  namespace: apache
+rules:
+  - apiGroups: ["apps","rbac.authorization.k8s.io/v1"]        # "" blank group mean for all
+    resources: ["deployment","pod","service"]                 # access for resources allow
+    verbs: ["get","apply","delete","watch","create","patch"]  # access for commands use
+</code></pre>
+
+<pre><code>kubectl apply -f role.yml</code></pre>
+
+<pre><code>
+kubectl get role -n apache
+#   output:
+#       NAME             CREATED AT
+#       apache-manager   2025-05-29T17:17:45Z
+</code></pre>
+
+now we will create serviceAccount, serviceAccount is like special user 
+
+service-account.yml
+<pre><code>
+kind: ServiceAccount
+apiVersion: v1
+metadata: 
+  name: apache-user
+  namespace: apache
+</code></pre>
+
+<pre><code>kubectl apply -f service-account.yml</code></pre>
+
+<pre><code>
+kubectl get serviceaccount -n apache
+#   output:
+#       NAME          SECRETS   AGE
+#       apache-user   0         7m13s
+#       default       0         10m
+</code></pre>
+
+now we will create role-binding
+
+role.binding.yml
+<pre><code>
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: apache-manager-rolebinding
+  namespace: apache
+
+subjects:
+- kind: User
+  name: apache-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: apache-manager
+  apiGroup: rbac.authorization.k8s.io
+</code></pre>
+
+<pre><code>kubectl get rolebinding -n apache</code></pre>
+
+<pre><code>kubectl auth can-i get pods --as=apache-user -n apache</code></pre>
+
+

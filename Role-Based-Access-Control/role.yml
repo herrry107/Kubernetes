@@ -1,0 +1,9 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: apache-manager
+  namespace: apache
+rules:
+  - apiGroups: ["*"] #["apps","rbac.authorization.k8s.io/v1"]        # "" blank group mean for all
+    resources: ["*"] #["deployment","pod","service"]                 # access for resources allow
+    verbs:  ["*"]  #["get","apply","delete","watch","create","patch"]  # access for commands use
