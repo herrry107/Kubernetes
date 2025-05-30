@@ -45,3 +45,7 @@ Open the Dashboard in your browser:
 <pre><code>http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/</code></pre>
 
 Use the token from the previous step to log in.
+
+![Dashboard](https://github.com/herrry107/Kubernetes/blob/main/images/monitoring-dashboard1.png)
+![Dashboard](https://github.com/herrry107/Kubernetes/blob/main/images/monitoring-dashboard2.png)
+![Dashboard](https://github.com/herrry107/Kubernetes/blob/main/images/monitoring-dashboard3.png)
