@@ -6,6 +6,8 @@ Deploy the Dashboard Apply the Kubernetes Dashboard manifest:
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
 </code></pre>
 
+![api-deployment-dashboard](https://github.com/herrry107/Kubernetes/blob/main/images/monitoring-dashboard.png)
+
 Create an Admin User Create a dashboard-admin-user.yml file with the following content:
 <pre><code>
 apiVersion: v1
