@@ -1,0 +1,9 @@
+kind: DevOpsBatch
+apiVersion: pratikdevops.com/v1
+metadata:
+  name: junnon-batch-9
+spec:
+  name: Devops-batch1
+  duration: 3 month
+  mode: live as always
+  platform: pratik

@@ -1,0 +1,38 @@
+kind: CustomResourceDefinition
+apiVersion: apiextensions.k8s.io/v1
+metadata:
+  name: devopsbatches.pratikdevops.com
+spec:
+  group: pratikdevops.com
+  names:
+    plural: devopsbatches
+    singular: devopsbatch
+    kind: DevOpsBatch
+    shortNames:
+      - junoon
+      - batches
+      - pratik
+  scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec: 
+            type: object
+            properties: 
+              name:
+                type: string
+                description: This is the name of devops batch
+              duration:
+                type: string
+                description: "This is the duration of devops batch"
+              mode:
+                type: string
+                description: "online classes"
+              platform:
+                type: string
+                description: "This is the description of platform"    
