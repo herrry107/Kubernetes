@@ -70,6 +70,8 @@ kubectl get pods -n nginx   # get pod in specific namespace
 - [14. Monitoring and Logging](https://github.com/herrry107/Kubernetes/tree/main/monitoring-and-logging)
 - [15. Custom Resource Definition](https://github.com/herrry107/Kubernetes/tree/main/custom-resource-definition)
 - [16. helm](https://github.com/herrry107/Kubernetes/tree/main/helm)
+- [17. service-mesh](https://github.com/herrry107/Kubernetes/tree/main/service-mesh)
+
 
 
 
