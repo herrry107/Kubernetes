@@ -135,3 +135,9 @@ sudo chown "$(id -u)":"$(id -g)" "$HOME"/.kube/config
 
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 </code></pre>
+
+**after appliying successfully allow port 6443 in master then run kubeadm join command in node**
+<pre><code>
+    kubeadm join <control-plane-ip>:6443 --token <token> \
+    --discovery-token-ca-cert-hash sha256:<hash>
+</code></pre>
