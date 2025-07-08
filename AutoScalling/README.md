@@ -73,6 +73,50 @@ kubectl top nodes
 
 ![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step3.png)
 
+**first create deployment**
+<pre><code>
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "50m"
+          limits:
+            cpu: "100m"
+</code></pre>
+
+**create service**
+<pre><code>
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 31500
+  type: NodePort
+</code></pre>
 
 # HPA
 
