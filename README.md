@@ -8,7 +8,7 @@ k8s architecture
 ![Alt text](https://github.com/herrry107/Kubernetes/blob/main/images/K8-arch.png)
 
 KUBERNETES CLUSTER CREATION TYPE
-- kubeadm
+- kubeadm 
 - minikube (local/ec2)
 - kind cluster (docker)
 - EKS/AKS/GKS
@@ -54,23 +54,24 @@ kubectl get pods -n nginx   # get pod in specific namespace
 
 # Read All Kubernetes Docs by these sequence
 
-- [1. Create Kind-Cluster](https://github.com/herrry107/Kubernetes/tree/main/kind-cluster)
-- [2. Create Minikube](https://github.com/herrry107/Kubernetes/tree/main/minikube)
-- [3. Namespace](https://github.com/herrry107/Kubernetes/tree/main/namespace)
-- [4. Pods](https://github.com/herrry107/Kubernetes/tree/main/pods)
-- [5. Jobs](https://github.com/herrry107/Kubernetes/tree/main/jobs)
-- [6. Volumes](https://github.com/herrry107/Kubernetes/tree/main/volume)
-- [7. Services](https://github.com/herrry107/Kubernetes/tree/main/services)
-- [8. Ingress](https://github.com/herrry107/Kubernetes/tree/main/ingress)
-- [9. ConfigMaps/Secrets](https://github.com/herrry107/Kubernetes/tree/main/config-maps-secrets)
-- [10. Probes](https://github.com/herrry107/Kubernetes/tree/main/probes)
-- [11. Taints/Tolerations](https://github.com/herrry107/Kubernetes/tree/main/Taints-Tolerations)
-- [12. Auto Scalling](https://github.com/herrry107/Kubernetes/tree/main/AutoScalling)
-- [13. Role Based Access Control](https://github.com/herrry107/Kubernetes/tree/main/Role-Based-Access-Control)
-- [14. Monitoring and Logging](https://github.com/herrry107/Kubernetes/tree/main/monitoring-and-logging)
-- [15. Custom Resource Definition](https://github.com/herrry107/Kubernetes/tree/main/custom-resource-definition)
-- [16. helm](https://github.com/herrry107/Kubernetes/tree/main/helm)
-- [17. service-mesh](https://github.com/herrry107/Kubernetes/tree/main/service-mesh)
+- [1. Create Cluster by kubeadm](https://github.com/herrry107/Kubernetes/tree/main/Kubeadm)
+- [2. Create Kind-Cluster](https://github.com/herrry107/Kubernetes/tree/main/kind-cluster)
+- [3. Create Minikube](https://github.com/herrry107/Kubernetes/tree/main/minikube)
+- [4. Namespace](https://github.com/herrry107/Kubernetes/tree/main/namespace)
+- [5. Pods](https://github.com/herrry107/Kubernetes/tree/main/pods)
+- [6. Jobs](https://github.com/herrry107/Kubernetes/tree/main/jobs)
+- [7. Volumes](https://github.com/herrry107/Kubernetes/tree/main/volume)
+- [8. Services](https://github.com/herrry107/Kubernetes/tree/main/services)
+- [9. Ingress](https://github.com/herrry107/Kubernetes/tree/main/ingress)
+- [10. ConfigMaps/Secrets](https://github.com/herrry107/Kubernetes/tree/main/config-maps-secrets)
+- [11. Probes](https://github.com/herrry107/Kubernetes/tree/main/probes)
+- [12. Taints/Tolerations](https://github.com/herrry107/Kubernetes/tree/main/Taints-Tolerations)
+- [13. Auto Scalling](https://github.com/herrry107/Kubernetes/tree/main/AutoScalling)
+- [14. Role Based Access Control](https://github.com/herrry107/Kubernetes/tree/main/Role-Based-Access-Control)
+- [15. Monitoring and Logging](https://github.com/herrry107/Kubernetes/tree/main/monitoring-and-logging)
+- [16. Custom Resource Definition](https://github.com/herrry107/Kubernetes/tree/main/custom-resource-definition)
+- [17. helm](https://github.com/herrry107/Kubernetes/tree/main/helm)
+- [18. service-mesh](https://github.com/herrry107/Kubernetes/tree/main/service-mesh)
 
 
 
