@@ -125,12 +125,11 @@ hpa.yml
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: apache-hpa
-  namespace: apache
+  name: nginx-hpa
 spec:
   scaleTargetRef:
     kind: Deployment
-    name: apache-deployment
+    name: nginx-deployment
     apiVersion: apps/v1
      
   minReplicas: 1
@@ -142,7 +141,7 @@ spec:
         name: cpu
         target: 
           type: Utilization
-          averageUtilization: 5    
+          averageUtilization: 5   #when exiding 5% than create new pod   
 </code></pre>
 <pre><code>kubectl apply -f hpa.yml</code></pre>
 <pre><code>kubectl get hpa -n apache</code></pre>
