@@ -74,6 +74,7 @@ kubectl top nodes
 ![Metrics-add-ssl-bypass](https://github.com/herrry107/Kubernetes/blob/main/images/metrics-step3.png)
 
 **first create deployment**
+deployment.yml
 <pre><code>
 apiVersion: apps/v1
 kind: Deployment
@@ -102,6 +103,7 @@ spec:
 </code></pre>
 
 **create service**
+service.yml
 <pre><code>
 kind: Service
 apiVersion: v1
