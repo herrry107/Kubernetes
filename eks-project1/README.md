@@ -139,3 +139,41 @@ Download IAM policy
 curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json
 </code></pre>
 
+Create IAM Policy
+<pre><code>
+aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file://iam_policy.json
+</code></pre>
+
+Create IAM Role
+<pre><code>
+eksctl create iamserviceaccount \
+  --cluster=<your-cluster-name> \
+  --namespace=kube-system \
+  --name=aws-load-balancer-controller \
+  --role-name AmazonEKSLoadBalancerControllerRole \
+  --attach-policy-arn=arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy \
+  --approve
+</code></pre>
+
+# Deploy ALB controller
+
+Add helm repo
+<pre><code>helm repo add eks https://aws.github.io/eks-charts</code></pre>
+
+Update the repo
+<pre><code>helm repo update eks</code></pre>
+
+Install
+<pre><code>
+    helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system \
+  --set clusterName=<your-cluster-name> \
+  --set serviceAccount.create=false \
+  --set serviceAccount.name=aws-load-balancer-controller \
+  --set region=<your-region> \
+  --set vpcId=<your-vpc-id>
+</code></pre>
+
+Verify that the deployments are running.
+<pre><code>kubectl get deployment -n kube-system aws-load-balancer-controller</code></pre>
