@@ -42,7 +42,11 @@ eksctl create fargateprofile \
     --namespace game-2048
 </code></pre>
 
+![fargate-install](https://github.com/herrry107/Kubernetes/blob/main/images/fargate-install.png)
+
 This command creates a Fargate profile in your Amazon EKS cluster named demo-cluster, allowing pods in the namespace game-2048 to run on AWS Fargate, which is a serverless compute engine for containers.
+
+![fargate-show-in-eks](https://github.com/herrry107/Kubernetes/blob/main/images/fargate1.png)
 
 # Deploy the deployment, service and Ingress
 
@@ -115,7 +119,11 @@ spec:
 <pre><code>kubectl apply -f depoyment-service-ingress.yml</code></pre>
 <pre><code>kubectl get all -n game-2048</code></pre>
 
+![service](https://github.com/herrry107/Kubernetes/blob/main/images/service.png)
+
 currently we don't have ingress controller that's  why we are not showing  address in ingress
+
+![service](https://github.com/herrry107/Kubernetes/blob/main/images/ingress1.png)
 
 first we need to create IAM OIDC provider because alb load balancer which is running need to connect application load balancer
 
