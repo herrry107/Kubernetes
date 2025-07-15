@@ -1,5 +1,7 @@
 # Basic EKS Cluster Project
 
+![fargate-install](https://github.com/herrry107/Kubernetes/blob/main/images/game-display.png)
+
 **we will learn**
 
 - EKS cluster
